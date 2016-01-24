@@ -11,7 +11,7 @@ $text: #333;
 $type: "sky_textregular", helvetica neue, helvetica, sans-serif;
 $link-color: #333;
 $link-hover: #0DA2D8;
-$link-vertical-padding: 9px;
+$link-vertical-padding: 8px;
 $link-horizontal-padding: 14px;
 $menu-background: #111;
 $buttonheight: 42px;
@@ -42,7 +42,6 @@ $breakpoint-medium: "only screen and (max-width: 1100px)";
 }
 
 @mixin svg-bg($name) {
-  background: url("../../images/#{$name}.svg") 0 0 no-repeat;
   background: url("../../images/#{$name}.png") transparent 0 0 no-repeat;
 }
 
@@ -60,12 +59,18 @@ $breakpoint-medium: "only screen and (max-width: 1100px)";
   transition-duration: $duration;
 }
 
-$desktop-width: 768px;
+$mobile-width: 640px;
 $tablet-width: 768px;
 $menu-tweak: 767px;
 
+@mixin mobile-screen {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
 @mixin small-screen {
-  @media (max-width: #{$desktop-width}) {
+  @media (max-width: #{$tablet-width}) {
     @content;
   }
 }
@@ -141,7 +146,6 @@ img {
 .wrapper {
   width: $grid-max-width;
   max-width: $grid-max-width;
-
   @include small-screen {
     width: 90%;
   }
@@ -202,6 +206,9 @@ header {
   @include small-screen {
     padding: 30px 0 20px;
   }
+  @include mobile-screen {
+    padding: 15px 0 20px;
+  }
 }
 
 #fixed-nav {
@@ -220,24 +227,31 @@ a.logo {
   height: 61px;
   display: block;
   text-indent: -9999px;
-
   @include svg-bg("logo");
-
   float: left;
-
   @include small-screen {
     width: 160px;
     height: 55px;
     background-size: auto;
+  }
+  @include mobile-screen {
+    width: 130px;
+    height: 40px;
+    background-size: contain;
+    margin-bottom: 5px;
   }
 }
 
 .navigation {
   /*float: right;*/
   margin-left: -14px;
+  margin-top: 5px;
   width: 100%;
   @include small-screen {
     margin-top: 9px;
+  }
+  @include mobile-screen {
+    margin-top: 0px;
   }
 }
 
@@ -276,7 +290,7 @@ nav ul {
     @include menu-tweak {
       float: none;
       position: relative;
-      margin: 0;
+      margin: 0 5px 0 0;
     }
 
 
@@ -309,11 +323,13 @@ nav a.current {
   border: 1px solid $blue;
   color: $blue;
   border-radius: 5px;
+  margin-left: 10px;
   &:hover {
     border: 1px solid $link-hover;
   }
   @include small-screen {
     border: 0;
+    margin-left: 0;
   }
 }
 
@@ -327,7 +343,7 @@ MOBILE NAV STYLES
   position: absolute;
   color: white;
   text-decoration: none;
-  top: 30px;
+  top: 9px;
   right: 0px;
   line-height: 0;
   font-size: 35px;
@@ -362,10 +378,20 @@ Search Field
 .search-area {
   .image {
     float: right;
+    @include mobile-screen {
+      display: none;
+    }
   }
   .search-field {
     float: right;
+    @include mobile-screen {
+      width: 100%;
+      margin-top: 5px;
+    }
   }
+  @include mobile-screen {
+      width: 100%;
+    }
 }
 
 form {
@@ -383,12 +409,16 @@ form {
     max-width: 350px;
     min-width: 350px;
   }
+  @include mobile-screen {
+    max-width: 100%;
+    min-width: 100%;
+  }
   input[type=text] {
     border: none;
     box-shadow: none;
     @include font-size(16px);
     width: 80%;
-    padding: 8px;
+    padding: 9px;
     margin: 0;
     overflow: hidden;
     &:focus {
@@ -423,7 +453,6 @@ form {
     
     &:hover, &:focus {
       background: linear-gradient(lighten($blue, 15%), lighten($blue, 7%));
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
       cursor: pointer;
     }
   }
@@ -514,9 +543,11 @@ Category Header
 
 #cat-title {
   background: $blue;
-  padding: 25px 0 23px;
+  padding: 25px 0 20px;
   color: white;
-  /*overflow: hidden;*/
+  @include mobile-screen {
+    padding:18px 0 5px;
+  }
   h4.cat-title {
     color: lighten($blue, 55%);
     font-weight:normal;
@@ -524,6 +555,10 @@ Category Header
   h2 {
     float: left;
     margin-right: 5px;
+    line-height: 120%;
+    @include mobile-screen {
+      @include font-size(30px);
+    }
   }
 }
 
@@ -532,6 +567,9 @@ Category Header
     top: 4px;
     margin: 0px auto;
     right: 0px;
+    @include mobile-screen {
+      top:-10px;
+    }
     .icons {
       -webkit-transition-duration: .2s;
       -moz-transition-duration: .2s;
@@ -587,6 +625,12 @@ Category Header
   background: white none repeat scroll 0% 0%;
   top: 0px;
   padding: 10px 30px;
+  @include small-screen {
+    padding: 7px 25px;
+  }
+  @include mobile-screen {
+    padding: 5px 20px;
+  }
 }
 
 #drop-menu a {
@@ -622,10 +666,12 @@ Service Section
 
 section#content {
   margin: 40px auto;
+  @include mobile-screen {
+    margin: 20px auto;
+  }
   .column-4 {
     padding: 0 1.2%;
   }
-
   img {
     width: 100%;
     height: auto;
@@ -644,17 +690,27 @@ section#content {
     h2 {
       margin-top: 40px;
       @include font-size(50px);
+      @include mobile-screen {
+        margin-top: 30px;
+        @include font-size(35px);
+      }
     }
   }
 
   .option {
     line-height: 180%;
+    @include mobile-screen {
+      margin-bottom: 20px;
+    }
     &:hover a.error-button::after {
       background: $blue !important;
       border: 2px solid #fff !important;
     }
     p {
       margin: 20px 0 30px;
+      @include mobile-screen {
+        margin-bottom: 20px;
+      }
     }
     a.error-button {
       padding:0 0 0 34px;
@@ -663,13 +719,14 @@ section#content {
       display: block;
       cursor: pointer;
       @include font-size(20px);
+      line-height: 135%;
       &:before {
         content:"";
         width: 24px;
         height: 24px;
         margin-bottom: 130px;
         position: absolute;
-        top: 4px;
+        top: 1px;
         left: 0px;
         background: #ccc;
         border-radius: 50px;
@@ -679,7 +736,7 @@ section#content {
         width: 18px;
         height: 18px;
         position: absolute;
-        top: 7px;
+        top: 4px;
         left: 3px;
         background: #fff;
         opacity: 1;
@@ -689,7 +746,7 @@ section#content {
         width: 18px;
         height: 18px;
         position: absolute;
-        top: 7px;
+        top: 4px;
         left: 3px;
         background: $blue;
         border-radius:50%;
@@ -758,6 +815,10 @@ a.button {
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    @include mobile-screen {
+        width: 100%;
+        text-align: center;
+      }
     &:hover{
       background:transparent;
       color: $blue;
