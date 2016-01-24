@@ -60,10 +60,18 @@ $breakpoint-medium: "only screen and (max-width: 1100px)";
   transition-duration: $duration;
 }
 
-$desktop-width: 1024px;
+$desktop-width: 768px;
+$tablet-width: 768px;
+$menu-tweak: 767px;
 
 @mixin small-screen {
   @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin menu-tweak {
+  @media (max-width: #{$menu-tweak}) {
     @content;
   }
 }
@@ -191,6 +199,9 @@ header {
   position: relative;
   z-index: 101;
   padding: 30px 0;
+  @include small-screen {
+    padding: 30px 0 20px;
+  }
 }
 
 #fixed-nav {
@@ -215,17 +226,19 @@ a.logo {
   float: left;
 
   @include small-screen {
-    margin-top: 15px;
-    width: 148px;
-    height: 40px;
-    background-size: cover;
+    width: 160px;
+    height: 55px;
+    background-size: auto;
   }
 }
 
 .navigation {
   /*float: right;*/
-  margin-left: -15px;
+  margin-left: -14px;
   width: 100%;
+  @include small-screen {
+    margin-top: 9px;
+  }
 }
 
 .search-area {
@@ -237,7 +250,7 @@ NAVIGATION STYLES
 ----------------------------*/
 nav {
   /*width:100%;*/
-  @include small-screen {
+  @include menu-tweak {
     margin: 65px 0 0 0;
     max-height: 0;
     overflow: hidden;
@@ -251,8 +264,7 @@ nav {
 nav ul {
   margin: 0;
   list-style: none;
-
-  @include small-screen {
+  @include menu-tweak {
     margin: 0;
     padding: 30px;
   }
@@ -261,8 +273,7 @@ nav ul {
   li {
     float: left;
     position: relative;
-
-    @include small-screen {
+    @include menu-tweak {
       float: none;
       position: relative;
       margin: 0;
@@ -275,17 +286,14 @@ nav ul {
       text-align: left;
       color: $link-color;
       text-decoration: none;
-
       @include transition-duration(0.5s);
-
       &:hover {
         background: $blue;
         color: white;
-
         @include transition-duration(0.5s);
       }
 
-      @include small-screen {
+      @include menu-tweak {
         display: table;
         margin: 0;
         padding: 15px 20px;
@@ -303,6 +311,9 @@ nav a.current {
   border-radius: 5px;
   &:hover {
     border: 1px solid $link-hover;
+  }
+  @include small-screen {
+    border: 0;
   }
 }
 
@@ -327,7 +338,7 @@ MOBILE NAV STYLES
   text-indent: -9999px;
   outline: none;
   @include svg-bg("menu-icon");
-  @include small-screen {
+  @include menu-tweak {
     display: block;
   }
 }
@@ -368,7 +379,10 @@ form {
   position: relative;
   max-width: 420px;
   min-width: 400px;
-  
+  @include small-screen {
+    max-width: 350px;
+    min-width: 350px;
+  }
   input[type=text] {
     border: none;
     box-shadow: none;
@@ -618,6 +632,11 @@ section#content {
   }
   .options {
     margin: 0 -1.2%;
+    @include small-screen {
+      .column-4 {
+        width: 100%;
+      }
+    }
   }
 
   .statement {
@@ -755,12 +774,15 @@ a.button {
   img.cloud {
     width: 90px;
     height: auto;
-    margin: 0 auto 50px;
+    margin: 0 auto 40px;
     display: inherit;
     opacity: .7;
   }
   .column-6 {
     padding: 20px;
+    @include small-screen {
+      width: 100%;
+    }
   }
   .checker {
     text-align: center;
