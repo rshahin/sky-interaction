@@ -1,0 +1,43 @@
+<div class="weather-checker">
+	<a class="close-button"><i class="icon-close icons"></i></a>
+	<div class="column-6 checker">
+		<div class="vertical-centre">
+			<h2>We've detected snow in your area</h2>
+			<div class="snow-fall">
+				<img class="cloud" src="images/cloud.svg" />
+					<div class="snow">
+					  <div class="flake2"></div>
+					  <div class="flake3"></div>
+					  <!-- <div class="flake4"></div> -->
+					</div>
+				Falling snow / Snow on dish
+				</div>
+		</div>
+	</div>
+
+	<div class="column-6">
+		<p>Snow can interfere with the signal from our satellites to your dish.</p>
+
+<p>Please wait for the snow to pass. If it’s not currently snowing, but has been in the past 48 hours, there might be standing snow on your dish. Please allow it to melt naturally.</p>
+
+<p>During this time, you can still enjoy your favourite programmes on Sky Go or on demand. You can also watch programmes you’ve recorded to your Planner.</p>
+
+<p>Please note if you reboot your Sky box, access to all recordings will be lost immediately.</p>
+
+<p>
+	<a class="button weather-check">Yes, there's bad weather</a>
+	<a class="button weather-check">No, the weather is fine</a>
+</p>
+	</div>
+</div>
+
+
+<script>
+$("a.close-button").click(function(e){
+	$("a.error-button, a.weather-check").removeClass("clicked");
+            e.preventDefault();
+            $("#content-ajax").slideUp();
+            $("#content-ajax").html("");
+            $('html,body').animate({scrollTop: $("#content").offset().top},'slow');
+        });
+</script>
