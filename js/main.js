@@ -45,9 +45,9 @@ $( document ).ready(function() {
 });
 
 
-$('.mobile-nav').click(function () {
-    $('nav').toggleClass('active'); 
-  });
+// $('.mobile-nav').click(function () {
+//     $('nav').toggleClass('active'); 
+//   });
 
 
 
@@ -57,8 +57,6 @@ var resizeElements;
 
 $(document).ready(function() {
 
-  // Set up common variables
-  // --------------------------------------------------
 
   var bar = ".search_bar";
   var input = bar + " input[type='text']";
@@ -68,9 +66,6 @@ $(document).ready(function() {
   var dropdownList = dropdown + " ul";
   var dropdownListItems = dropdownList + " li";
 
-
-  // Set up common functions
-  // --------------------------------------------------
 
   resizeElements = function() {
     var barWidth = $(bar).outerWidth();
@@ -97,13 +92,8 @@ $(document).ready(function() {
   }
 
 
-  // Initialize initial resize of initial elements 
-  // --------------------------------------------------
   resizeElements();
 
-
-  // Toggle new dropdown menu on click
-  // --------------------------------------------------
 
   $(dropdown).click(function(event) {
     if ($(dropdown).hasClass("active")) {
@@ -119,8 +109,6 @@ $(document).ready(function() {
   $("html").click(dropdownOff);
 
 
-  // Activate new dropdown option and show tray if applicable
-  // --------------------------------------------------
 
   $(dropdownListItems).click(function() {
     $(this).siblings("li.selected").removeClass("selected");
@@ -136,9 +124,6 @@ $(document).ready(function() {
 
   });
 
-
-  // Resize all elements when the window resizes
-  // --------------------------------------------------
 
   $(window).resize(function() {
     resizeElements();

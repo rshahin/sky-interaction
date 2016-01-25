@@ -235,9 +235,13 @@ a.logo {
     background-size: auto;
   }
   @include mobile-screen {
-    width: 130px;
-    height: 40px;
-    background-size: contain;
+    width: 100px;
+    height: 55px;
+    background-size: auto;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: center;
     margin-bottom: 5px;
   }
 }
@@ -253,6 +257,7 @@ a.logo {
   @include mobile-screen {
     margin-top: 0px;
   }
+
 }
 
 .search-area {
@@ -337,14 +342,15 @@ nav a.current {
 MOBILE NAV STYLES
 ----------------------------*/
 .mobile-nav {
+  opacity: .95;
   display: none;
   margin: 0;
-  padding: 15px;
+  padding: 17px;
   position: absolute;
   color: white;
   text-decoration: none;
-  top: 9px;
-  right: 0px;
+  top: 17px;
+  left: 0px;
   line-height: 0;
   font-size: 35px;
   text-shadow: none;
@@ -370,6 +376,34 @@ MOBILE NAV STYLES
   display: block;
 }
 
+.mobile-user-nav {
+  display: none;
+  margin: 0;
+  position: absolute;
+  color: $text;
+  text-decoration: none;
+  top: 17px;
+  right: 0px;
+  line-height: 0;
+  font-size: 35px;
+  text-shadow: none;
+  box-shadow: none;
+  height: 27px;
+  width: 27px;
+  outline: none;
+  opacity: .85;
+  @include svg-bg("user");
+  background-size: cover;
+  @include menu-tweak {
+    display: block;
+  }
+  i {
+    position: absolute;
+    left: 0;
+    top:0;
+    font-size: 28px;
+  }
+}
 
 /*----------------------------
 Search Field
@@ -423,6 +457,9 @@ form {
     overflow: hidden;
     &:focus {
       outline: none;
+    }
+    @include mobile-screen {
+      padding: 10px;
     }
   }
   
@@ -551,6 +588,9 @@ Category Header
   h4.cat-title {
     color: lighten($blue, 55%);
     font-weight:normal;
+    @include mobile-screen {
+      @include font-size(18px);
+    }
   }
   h2 {
     float: left;
@@ -558,6 +598,7 @@ Category Header
     line-height: 120%;
     @include mobile-screen {
       @include font-size(30px);
+      margin-top: 2px;
     }
   }
 }
@@ -692,8 +733,11 @@ section#content {
       @include font-size(50px);
       @include mobile-screen {
         margin-top: 30px;
-        @include font-size(35px);
+        @include font-size(33px);
       }
+    }
+    @include mobile-screen {
+      margin-bottom: 20px;
     }
   }
 
@@ -768,8 +812,8 @@ section#content {
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         background: white;
         text-align: center;
         i {
@@ -950,11 +994,26 @@ transform:translateY(0px);
 }
 
 
+.pushy-active .site-overlay {
+    background-color: transparent;
+}
 
+.pushy-left{
+    transform: translate3d(-250px,0,0);
+}
 
+.container-push, .push-push{
+    transform: translate3d(250px,0,0);
+}
 
+.pushy {
+    background: $blue;
+    width: 250px;
+}
 
-
+.pushy a {
+    color: white;
+}
 
 
 footer {

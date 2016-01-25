@@ -41,138 +41,154 @@
         <link rel="stylesheet" href="css/normilize.css" media="all">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.3/css/simple-line-icons.css">
         <link rel="stylesheet" href="font/stylesheet.css" media="all">
+        <link rel="stylesheet" href="css/build/pushy.css" media="all">
         <link rel="stylesheet" href="css/build/style.css" media="all">
 
 	</head>
 
 		<body>
 
-	        <header>
-	        	<div class="wrapper">
+			<div class="pushy pushy-left">
+			    <ul>
+			        <li><a href="#">Home</a></li>
+									    <li><a href="#">Find & Watch TV</a></li>
+									    <li><a href="#">Shop</a>
+									    <li><a href="#">My Sky</a></li>
+			    </ul>
+			</div>
+			<div class="site-overlay"></div>
 
-		        		<a href="#" class="logo">Sky</a>
-		        		
-		        		<div class="search-area">
-		        			
-		        			<div class="search-field">
-								<form class="search_bar">
-								  <div class="search_dropdown" style="width: 16px;">
-								    <span>All</span>
-								    <ul>
-								      <li class="selected">All</li>
-								      <li>Sky TV</li>
-								      <li>Sky Broadband</li>
-								      <li>Sky Go</li>
-								      <li>Sky Talk</li>
-								    </ul>
-								  </div>
+			<div id="container">
 
-								  <input type="text" placeholder="Search help and support" />
+		        <header>
+		        	<div class="wrapper">
 
-								  <button type="submit" value="Search">Search</button>
-								</form>
-		        			</div>
-		        			<div class="image"><img src="images/search-area.png"></div>
-		        		</div>
+			        		<a href="#" class="logo">Sky</a>
+			        		
+			        		<div class="search-area">
+			        			
+			        			<div class="search-field">
+									<form class="search_bar">
+									  <div class="search_dropdown" style="width: 16px;">
+									    <span>All</span>
+									    <ul>
+									      <li class="selected">All</li>
+									      <li>Sky TV</li>
+									      <li>Sky Broadband</li>
+									      <li>Sky Go</li>
+									      <li>Sky Talk</li>
+									    </ul>
+									  </div>
 
+									  <input type="text" placeholder="Search help and support" />
+
+									  <button type="submit" value="Search">Search</button>
+									</form>
+			        			</div>
+			        			<div class="image"><img src="images/search-area.png"></div>
+			        		</div>
+
+			        		<div class="break"></div>
+
+			        		<div class="navigation">
+				        		<!-- <a class="mobile-nav" href="#">&#9776;</a> -->
+				        		<div class="mobile-user-nav"></div>
+				        		<div class="menu-btn mobile-nav"><i class="icon-menu"></i></div>
+									<nav>
+									  <ul>
+									    <li><a href="#">Home</a></li>
+									    <li><a href="#">Find & Watch TV</a></li>
+									    <li><a href="#">Shop</a>
+									    <li><a href="#">My Sky</a></li>
+									    <li><a class="current" href="#">Help & Support</a></li>
+									  </ul>
+									  <div class="break"></div>
+									</nav>
+							</div>
+
+		        	</div>
+		        </header>
+
+		        <section id="cat-title">
+		        	<div class="wrapper">
+		        		<h4 class="cat-title">Help / TV help</h4>
 		        		<div class="break"></div>
-
-		        		<div class="navigation">
-			        		<a class="mobile-nav" href="#">&#9776;</a>
-								<nav>
-								  <ul>
-								    <li><a href="#">Home</a></li>
-								    <li><a href="#">Find & Watch TV</a></li>
-								    <li><a href="#">Shop</a>
-								    <li><a href="#">My Sky</a></li>
-								    <li><a class="current" href="#">Help & Support</a></li>
-								  </ul>
-								  <div class="break"></div>
-								</nav>
-						</div>
-
-	        	</div>
-	        </header>
-
-	        <section id="cat-title">
-	        	<div class="wrapper">
-	        		<h4 class="cat-title">Help / TV help</h4>
-	        		<div class="break"></div>
-	        		<h2>No satellite signal</h2>
-		        		<div class="dropdown-wrap">
-						<div id="error-dropdown"></div>
-						<i id="settings" class="icon-arrow-down icons"></i>
-						<div id="drop-menu">
-							<!-- <div id="arrow"></div> -->
-								<a href="#">Sky Remote Control</a>
-								<a href="#">Recordings and Planner</a>
-								<a href="#">TV on demand</a>
-								<a href="#">See More Articles</a>
+		        		<h2>No satellite signal</h2>
+			        		<div class="dropdown-wrap">
+								<div id="error-dropdown"></div>
+								<i id="settings" class="icon-arrow-down icons"></i>
+								<div id="drop-menu">
+									<!-- <div id="arrow"></div> -->
+										<a href="#">Sky Remote Control</a>
+										<a href="#">Recordings and Planner</a>
+										<a href="#">TV on demand</a>
+										<a href="#">See More Articles</a>
+								</div>
 							</div>
-						</div>
+		        	</div>
+		        </section>
+
+
+				<section class="wrapper" id="content">
+					<div class="statement">
+						<p>If you’re having problems with your satellite signal, these diagnostic steps can help identify the issue. They should take no longer than a <strong>few minutes</strong> to complete.</p>
+						<p>Before we get started, it’s important for us to know what appears on your screen when you’re watching Sky.</p>
+						<h2>What does your TV screen look like?</h2>
 					</div>
-	        	</div>
-	        </section>
-
-
-			<section class="wrapper" id="content">
-				<div class="statement">
-					<p>If you’re having problems with your satellite signal, these diagnostic steps can help identify the issue. They should take no longer than a <strong>few minutes</strong> to complete.</p>
-					<p>Before we get started, it’s important for us to know what appears on your screen when you’re watching Sky.</p>
-					<h2>What does your TV screen look like?</h2>
-				</div>
-				<div class="options">
-					<div class="column-4 option">
-							<a class="error-button weather-check">It says Sky TV is not getting a satellite signal.</a>
-							<!-- <div class="checkbox-wrapper">
-							    <div class="checkbox">
-							      <input type="checkbox" value="None" id="no-satellite" name="check" />
-							      <label for="no-satellite"></label>
-							    </div>
+					<div class="options">
+						<div class="column-4 option">
+								<a class="error-button weather-check">It says Sky TV is not getting a satellite signal.</a>
+								<!-- <div class="checkbox-wrapper">
+								    <div class="checkbox">
+								      <input type="checkbox" value="None" id="no-satellite" name="check" />
+								      <label for="no-satellite"></label>
+								    </div>
+								</div>
+								<div class="message">
+							    	<h4>It says Sky TV is not getting a satellite signal.</h4>
+								</div> -->
+							<div class="img-error">
+								<a class="weather-check" href="#"><img src="images/error_nss-desktop.jpg"></a>
+								<div class="magnifier"><a href="#"><i class="icon-magnifier-add icons"></i></a></div>
 							</div>
-							<div class="message">
-						    	<h4>It says Sky TV is not getting a satellite signal.</h4>
-							</div> -->
-						<div class="img-error">
-							<a class="weather-check" href="#"><img src="images/error_nss-desktop.jpg"></a>
-							<div class="magnifier"><a href="#"><i class="icon-magnifier-add icons"></i></a></div>
+							<p>If you see an error message like this, the problem’s likely to be with your dish, outside cables or the connections to your Sky box.</p>
+							<p><a class="button weather-check">Help me fix it</a></p>
 						</div>
-						<p>If you see an error message like this, the problem’s likely to be with your dish, outside cables or the connections to your Sky box.</p>
-						<p><a class="button weather-check">Help me fix it</a></p>
-					</div>
 
-					<div class="column-4 option">
-							<a class="error-button weather-check">It's showing a black screen that says No Signal.</a>
-						<div class="img-error">
-							<a class="weather-check" href="#"><img src="images/error_tv-desktop.jpg"></a>
-							<div class="magnifier"><a href="#"><i class="icon-magnifier-add icons"></i></a></div>
+						<div class="column-4 option">
+								<a class="error-button weather-check">It's showing a black screen that says No Signal.</a>
+							<div class="img-error">
+								<a class="weather-check" href="#"><img src="images/error_tv-desktop.jpg"></a>
+								<div class="magnifier"><a href="#"><i class="icon-magnifier-add icons"></i></a></div>
+							</div>
+							<p>If your Sky box is on and your screen says no input or no signal, there might be a problem with the connection between your Sky box and TV.</p>
+							<p><a class="button weather-check">Help me fix it</a></p>
 						</div>
-						<p>If your Sky box is on and your screen says no input or no signal, there might be a problem with the connection between your Sky box and TV.</p>
-						<p><a class="button weather-check">Help me fix it</a></p>
-					</div>
 
-					<div class="column-4 option">
-							<a class="error-button weather-check">The picture is distorted and keeps freezing.</a>						<div class="img-error">
-							<a class="weather-check" href="#"><img src="images/error_blurry_image-desktop.jpg"></a>
-							<div class="magnifier"><a href="#"><i class="icon-magnifier-add icons"></i></a></div>
+						<div class="column-4 option">
+								<a class="error-button weather-check">The picture is distorted and keeps freezing.</a>						<div class="img-error">
+								<a class="weather-check" href="#"><img src="images/error_blurry_image-desktop.jpg"></a>
+								<div class="magnifier"><a href="#"><i class="icon-magnifier-add icons"></i></a></div>
+							</div>
+							<p>If your picture’s distorted, it could be down to a loose connection or severe weather conditions.</p>
+							<p><a class="button weather-check">Help me fix it</a></p>
 						</div>
-						<p>If your picture’s distorted, it could be down to a loose connection or severe weather conditions.</p>
-						<p><a class="button weather-check">Help me fix it</a></p>
 					</div>
+					<div class="break"></div>
+					<div id="wait" style="display:none;width:69px;height:89px;margin:0 auto;"><img src='images/demo_wait.gif' width="64" height="64" /><br>Loading..</div>
+					<div id="content-ajax" style="display:none;"></div>
+				</section>
+
+
+				<footer>
+					<img src="images/footer.jpg" />
+				</footer>
+
 				</div>
-				<div class="break"></div>
-				<div id="wait" style="display:none;width:69px;height:89px;margin:0 auto;"><img src='images/demo_wait.gif' width="64" height="64" /><br>Loading..</div>
-				<div id="content-ajax" style="display:none;"></div>
-			</section>
-
-
-			<footer>
-				<img src="images/footer.jpg" />
-			</footer>
 
 	       	<script src="js/jquery.min.js"></script>
 	        <script src="js/main.js"></script>
-
+	        <script src="js/pushy.min.js"></script>
 		</body>
 
 	</html>
