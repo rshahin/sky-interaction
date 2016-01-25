@@ -1,6 +1,6 @@
 ## Sky Diagnostics
 
-Preview Link: https://cdn.rawgit.com/rshahin/sky-interaction/master/index.html
+Preview Link: https://rawgit.com/rshahin/sky-interaction/master/index.html
 
 ## Initial thoughts: 
 
