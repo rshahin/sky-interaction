@@ -1,6 +1,10 @@
 ## Sky Diagnostics
 
-## Initial thoughts: On first glance, the design seem to be spot on, it felt like a case of why fix something that's not broken. Which it still is. The essentials are all there and the site is easy to navigate.
+Preview Link: https://htmlpreview.github.io/?https://github.com/rshahin/sky-interaction/blob/master/index.html
+
+## Initial thoughts: 
+
+On first glance, the design seem to be spot on, it felt like a case of why fix something that's not broken. Which it still is. The essentials are all there and the site is easy to navigate.
 
 The first requirement of the assignment I felt was that the design had to work with the rest of the sky websites. Which meant I discarded the idea of a complete redesign from the get go. I’m using the word loosely but history tells us that radical redesign doesn’t always lead to good reaction from people. Digg tried to do it and failed, so did Yahoo mail. Given the scale of the site I felt that it was important to keep the site familiar and not alienate existing/registered visitors but at the same time, use the existing design and space to improve user experience. A quick research led me to http://www.skymedia.co.uk/Audience-Insight/online-research.aspx which showed that when it comes to Sky homepage and Sky portal, the demographic consist of both the younger and older generation with the former slightly ahead. This means that more of the visitors to the site are younger and most likely be familiar with existing navigational practices found of websites on a general basis and further addition to the site’s design will not alienate them. 
 
