@@ -844,6 +844,9 @@ a.button {
     @include small-screen {
       width: 100%;
     }
+    @include mobile-screen {
+      padding: 0px;
+    }
   }
   .checker {
     text-align: center;
@@ -852,6 +855,11 @@ a.button {
   .vertical-centre {
     display: table-cell;
     vertical-align: middle;
+  }
+  a.button {
+    @include mobile-screen {
+      margin-bottom: 10px;
+    }
   }
 }
 
