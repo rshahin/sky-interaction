@@ -37,7 +37,6 @@ $("a.close-button").click(function(e){
 	$("a.error-button, a.weather-check").removeClass("clicked");
             e.preventDefault();
             $("#content-ajax").slideUp();
-            $("#content-ajax").html("");
             $('html,body').animate({scrollTop: $("#content").offset().top},'slow');
         });
 </script>
