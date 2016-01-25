@@ -37,13 +37,7 @@ $( document ).ready(function() {
 
 
   $("#settings, #admin_settings" ).on( "click", function() {
-        $(this).toggleClass("on", function() {
-          if ( $(this).hasClass( "on" ) ) {
-            return "off";
-              } else {
-            return "off";
-          }
-    });
+        $(this).toggleClass("on");
         $( "#drop-menu" ).slideToggle( "fast" );
   });
 
