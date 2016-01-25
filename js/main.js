@@ -25,7 +25,8 @@ $( document ).ready(function() {
         $('html,body').animate({scrollTop: $("#content-ajax").offset().top},'slow');
     });
 
-    $("a.weather-check").click(function() {
+    $("a.weather-check").click(function(e) {
+      e.preventDefault();
       $("a.weather-check").removeClass("clicked");
       $(this).addClass("clicked");
       $(this).closest('.option').children('a.error-button').addClass("clicked");
