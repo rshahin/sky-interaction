@@ -711,14 +711,14 @@ section#content {
     margin: 20px auto;
   }
   .column-4 {
-    padding: 0 1.2%;
+    /*padding: 0 1.2%;*/
   }
   img {
     width: 100%;
     height: auto;
   }
   .options {
-    margin: 0 -1.2%;
+    /*margin: 0 -1.2%;*/
     @include small-screen {
       .column-4 {
         width: 100%;
@@ -743,8 +743,27 @@ section#content {
 
   .option {
     line-height: 180%;
-    @include mobile-screen {
-      margin-bottom: 20px;
+    padding: 25px;
+    border: 1px solid #eee;
+    margin-right: 25px;
+    width: calc(33.333% - 17px);
+    &:last-child {
+      margin-right:0;
+    }
+    @include small-screen {
+      margin-bottom: 30px;
+      padding: 0 0 40px 0;
+      border: 0px solid #eee;
+      margin-right: 0;
+      width: 33.333%;
+      border-bottom: 1px solid #eee;
+    }
+    &:hover {
+      border:1px solid #ddd;
+      @include small-screen {
+        border:0px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
     }
     &:hover a.error-button::after {
       background: $blue !important;
@@ -754,6 +773,9 @@ section#content {
       margin: 20px 0 30px;
       @include mobile-screen {
         margin-bottom: 20px;
+      }
+      &:last-child{
+        margin-bottom: 0;
       }
     }
     a.error-button {
