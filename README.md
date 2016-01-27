@@ -38,6 +38,6 @@ The weather check section now shows animated weather-condition as opposed to a s
 
 
 #7 Responsiveness:
-There are two break points, one for phones and another for tablet screens. I made the issue sections stretch to 100% on tablets as well as I felt three columns on smaller tablets might not be very legible, plus people usually hold tablets a fair bit further than phones. 
+There are two break points, one for phones and another for tablet screens. I made the issues sections stretch to 100% on tablets as well as I felt three columns on smaller tablets might not be very legible, plus people usually hold tablets a fair bit further than phones. 
 
 The phone version header is not quite interactive as of now, I’m still working on it, it’s roughly the same as the current one, except the search field is not visible under the logo and menu button, I wouldn’t have bothered with any other site but given the scope of this site, it could be important. However, I feel more user feedback/behavioural data is required to make a final decision. 
