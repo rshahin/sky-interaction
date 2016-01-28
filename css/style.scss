@@ -580,6 +580,7 @@ Category Header
 
 #cat-title {
   background: $blue;
+  background:linear-gradient(lighten($blue, 0%), lighten($blue, 3%));
   padding: 25px 0 20px;
   color: white;
   @include mobile-screen {
@@ -679,7 +680,7 @@ Category Header
   background: white;
   padding: 0;
   text-decoration: none;
-  color: #777;
+  color: #555;
   line-height: 45px;
   border-bottom: 1px solid #e0e0e0;
   &:last-child {
@@ -688,7 +689,7 @@ Category Header
 }
 
 #drop-menu a:hover { 
-  color: #555; 
+  color: #333; 
 }
 
 #arrow
@@ -819,14 +820,18 @@ section#content {
         border: 2px solid #fff;
       }
     }
-    .clicked {
+  }
+
+  .clicked {
       position: relative;
-      &:after {
+      border: 1px solid #ccc;
+    }
+
+    .clicked a.error-button::after {
         background: $blue !important;
         border: 2px solid #fff !important;
-      }
     }
-  }
+
   .img-error {
       margin: 0 0 10px 0;
       position: relative;

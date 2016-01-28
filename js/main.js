@@ -27,9 +27,8 @@ $( document ).ready(function() {
 
     $("a.weather-check").click(function(e) {
       e.preventDefault();
-      $("a.weather-check").removeClass("clicked");
-      $(this).addClass("clicked");
-      $(this).closest('.option').children('a.error-button').addClass("clicked");
+      $(".option").removeClass("clicked");
+      $(this).closest('.option').addClass("clicked");
       $("#content-ajax").html("");
       $.ajaxSetup({cache:false});
           $("#content-ajax").load("check.html", function() {
