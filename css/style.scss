@@ -823,14 +823,13 @@ section#content {
   }
 
   .clicked {
-      position: relative;
-      border: 1px solid #ccc;
+    position: relative;
+    border: 1px solid #ccc;
+    a.error-button::after {
+      background: $blue !important;
+      border: 2px solid #fff !important;
     }
-
-    .clicked a.error-button::after {
-        background: $blue !important;
-        border: 2px solid #fff !important;
-    }
+  }
 
   .img-error {
       margin: 0 0 10px 0;
