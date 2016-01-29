@@ -49,6 +49,17 @@ $( document ).ready(function() {
 //   });
 
 
+$(window).scroll(function() {
+if (($(this).scrollTop() > 250) && ($(window).width() > 1024)){ 
+    $('header').addClass("sticky");
+    var height = (233 - $("header").height());
+    $("#container").css("padding-top", height);
+  }
+  else{
+    $('header').removeClass("sticky");
+    $("#container").css("padding-top", "0px")
+  }
+});
 
 
 
